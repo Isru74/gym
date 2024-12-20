@@ -1,38 +1,40 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FitLife Gym</title>
-  <link rel="stylesheet" href="Gym.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Calculator</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="hero-section">
-    <div class="container">
-      <h1>Welcome to FitLife Gym</h1>
-      <p>Your journey to fitness starts here!</p>
-      <p><strong>Telebirr Account:</strong> 10005678990</p>
-      <p><strong>Amount:</strong> 1200 ETB (Monthly Membership)</p>
-      <a href="#registrationForm" class="cta-button">Register Now</a>
+    <div id="calculator">
+        <input id="display" readonly>
+        <div id="keys">
+            <button class="button operator-btn" onclick="appendTODISPLAY('+')">+</button>
+            <button class="button" onclick="appendTODISPLAY('7')">7</button>
+            <button class="button" onclick="appendTODISPLAY('8')">8</button>
+            <button class="button" onclick="appendTODISPLAY('9')">9</button>
+            <button class="button operator-btn" onclick="appendTODISPLAY('-')">-</button>
+            <button class="button" onclick="appendTODISPLAY('4')">4</button>
+            <button class="button" onclick="appendTODISPLAY('5')">5</button>
+            <button class="button" onclick="appendTODISPLAY('6')">6</button>
+            <button class="button operator-btn" onclick="appendTODISPLAY('*')">*</button>
+            <button class="button" onclick="appendTODISPLAY('1')">1</button>
+            <button class="button" onclick="appendTODISPLAY('2')">2</button>
+            <button class="button" onclick="appendTODISPLAY('3')">3</button>
+            <button class="button operator-btn" onclick="appendTODISPLAY('/')">/</button>
+            <button class="button" onclick="appendTODISPLAY('0')">0</button>
+            <button class="button" onclick="appendTODISPLAY('.')">.</button>
+            <button class="button operator-btn" onclick="calculate()">=</button>
+            <button class="button operator-btn" onclick="cleardisplay()">C</button>
+            <button class="button operator-btn" onclick="calculateSquareRoot()">√</button>
+        </div>
     </div>
-    <div
-    id="output">waiting for a response from the backend. . .</div>
-  </header>
-
-  <main>
-    <!-- Registration Form Section -->
-    <section id="register" class="registration-section">
-      <h2>Register for Membership</h2>
-      <form id="registrationForm">
-        <input type="text" id="name" placeholder="Name" required>
-        <input type="email" id="email" placeholder="Email" required>
-        <input type="text" id="paymentRef" placeholder="Payment Reference" required>
-        <button type="submit" class="submit-button">Register</button>
-      </form>
-      <p id="message"></p> <!-- Message to display success or error -->
-    </section>
-  </main>
-
-  <script src="Gym.js"></script>
+    <script src="script.js"></script>
+    <footer class="footer">
+        <div class="footer-container">
+            <p>&copy; 2024 Responsive Calculator. Created by Israel.</p>
+        </div>
+    </footer>
 </body>
 </html>
